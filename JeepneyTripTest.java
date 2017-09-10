@@ -32,4 +32,12 @@ public class JeepneyTripTest extends TestCase {
     
     assertEquals(4.0, t.fareChange(10));
   }
+  
+  public void testExcessDistance() {
+    JeepneyTrip t = new JeepneyTrip(5, 0, 0);
+    JeepneyTrip trip = new JeepneyTrip(9, 0, 0);
+    
+    assertEquals(0.0, t.excessDistance());
+    assertEquals(4.0, trip.excessDistance());
+  }
 }
